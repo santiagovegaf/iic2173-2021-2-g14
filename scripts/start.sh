@@ -1,2 +1,3 @@
 #!/bin/bash
-docker-compose -f /home/ec2-user/web/foku/docker-compose.production.yml up -d
+cd /iic2173-2021-2-g14
+docker-compose up -d
