@@ -14,7 +14,7 @@ install:
 
 script:
   - echo "no tests!" #Tests go here
-  - sed -i -e 's/\r$/\n/' start.sh
+  - sed -i -e 's/\r$/\n/' scripts/start.sh
   - sed -i -e 's/\r$/\n/' stop.sh
   - sed -i -e 's/\r$/\n/' install.sh #correct files endings
   - zip -r latest *
