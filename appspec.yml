@@ -1,0 +1,25 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /home/ubuntu/aws-codedeploy
+permissions:
+  - object: /home/ubuntu
+    owner: ubuntu
+    group: ubuntu
+
+
+hooks:
+  ApplicationStop:
+    - location: scripts/stop.sh
+      timeout: 600
+      runas: ubuntu
+  AfterInstall:
+    - location: scripts/install.sh
+      timeout: 600
+      runas: ubuntu
+  ApplicationStart:
+    - location: scripts/start.sh
+      timeout: 600
+      runas: ubuntu
