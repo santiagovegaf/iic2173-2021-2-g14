@@ -2,24 +2,21 @@ version: 0.0
 os: linux
 
 files:
-  - source: scripts
-    destination: /home/ubuntu/iic2173-2021-2-g14
-permissions:
-  - object: scripts
-    pattern: "**"
-    owner: ubuntu
+  - source: /
+    destination: /iic2173-2021-2-g14
+
 
 
 hooks:
   ApplicationStop:
-    - location: stop.sh
+    - location: script/stop.sh
       timeout: 300
       runas: ubuntu
   AfterInstall:
-    - location: install.sh
+    - location: scripts/install.sh
       timeout: 300
       runas: ubuntu
   ApplicationStart:
-    - location: start.sh
+    - location: scripts/start.sh
       timeout: 300
       runas: ubuntu
