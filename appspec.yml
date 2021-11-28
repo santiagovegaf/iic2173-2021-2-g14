@@ -2,21 +2,22 @@ version: 0.0
 os: linux
 
 files:
-  - source: /
-    destination: /iic2173-2021-2-g14
-
-
-
+  - source: /scripts
+    destination: /home/ec2-user/web/MYAPP
+permissions:
+  - object: scripts
+    pattern: "**"
+    owner: ec2-user
 hooks:
   ApplicationStop:
-    - location: script/stop.sh
+    - location: stop.sh
       timeout: 300
-      runas: ubuntu
+      runas: ec2-user
   AfterInstall:
-    - location: scripts/install.sh
+    - location: install.sh
       timeout: 300
-      runas: ubuntu
+      runas: ec2-user
   ApplicationStart:
-    - location: scripts/start.sh
+    - location: start.sh
       timeout: 300
-      runas: ubuntu
+      runas: ec2-user
