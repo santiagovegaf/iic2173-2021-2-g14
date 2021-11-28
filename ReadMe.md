@@ -51,4 +51,4 @@ Con una llave llamada `back_e1_arqsys.pem`.
 
 Se utilizó el template del curso Tecnologías y Aplicaciones Web disponible en el siguiente repositorio:
 
-[Generator commands · IIC2513/generator-template Wiki](https://github.com/IIC2513/generator-template/wiki/Generator-commands) 
+[Generator commands · IIC2513/generator-template Wiki](https://github.com/IIC2513/generator-template/wiki/Generator-commands)
