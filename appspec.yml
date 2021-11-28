@@ -2,12 +2,12 @@ version: 0.0
 os: linux
 
 files:
-  - source: /
-    destination: /home/ubuntu/aws-codedeploy
+  - source: scripts
+    destination: /home/ubuntu/iic2173-2021-2-g14
 permissions:
-  - object: /home/ubuntu
+  - object: scripts
+    pattern: "**"
     owner: ubuntu
-    group: ubuntu
 
 
 hooks:
